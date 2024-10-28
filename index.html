@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management App</title>
+    <link rel="stylesheet" href="Style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Product Management App</h1>
+        <div id="cart-section">
+            <span id="cart-count">Cart (0)</span>
+        </div>
+        <div id="filter-section">
+            <input type="text" id="search-bar" placeholder="Search Product...">
+            <select id="category-filter">
+                <option value="">All Category</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Wearables">Wearables</option>
+                <option value="Home & Kitchen">Home & Kitchen</option>
+            </select>
+            <input type="number" id="min-price" placeholder="Min Price">
+            <input type="number" id="max-price" placeholder="Max Price">
+        </div>
+    </header>
+    <section id="product-list">
+        
+
+    </section>
+    <h1>Product Management Application</h1>
+    <div id="product-container">
+        <h2>Products</h2>
+        <div id="product-list"></div>
+    </div>
+    
+    <h2>Add New Product</h2>
+    <form id="product-form">
+        <input type="text" id="product-title" placeholder="Title" required>
+        <input type="text" id="product-discription" placeholder="Description" required>
+        <input type="number" id="product-price" placeholder="Price" required>
+        <input type="number" id="product-quantity" placeholder="Quantity" required>
+        <button type="submit">Add Product</button>
+    </form>
+    <button onclick="addPredefinedProducts()">Add Predefined Products</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
